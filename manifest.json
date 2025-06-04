@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Ads Transparency Country Analyzer",
+  "version": "1.0",
+  "description": "Analisa a quantidade e porcentagem de anúncios por país e verifica anúncios ativos de ontem.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://adstransparency.google.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Analisar Países" }
+}
