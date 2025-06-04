@@ -6,5 +6,12 @@
   "permissions": ["scripting", "activeTab"],
   "host_permissions": ["https://adstransparency.google.com/*"],
   "background": { "service_worker": "background.js" },
-  "action": { "default_title": "Analisar Países" }
+  "action": { "default_title": "Analisar Países" },
+  "content_scripts": [
+    {
+      "matches": ["https://adstransparency.google.com/advertiser/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
